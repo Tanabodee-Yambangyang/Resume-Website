@@ -1,0 +1,84 @@
+.homepage-content {
+    font-size: 1.2vw;
+    margin-top: 10%;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+
+/* Intro section */
+
+.intro-container, .about-container, .project-container, .contact-container {
+    display: flex;
+    flex-direction: column;
+    font-size: 2vw;
+    margin-top: 4%;
+}
+
+.about-container, .project-container, .contact-container {
+    border-top: 1px solid black;
+}
+
+.intro-container {
+    margin-bottom: 5%;
+}
+
+.scroll-to-project-btn {
+    margin-top: 8%;
+    width: 25%;
+    height: 10vh;
+    
+}
+
+.scroll-to-project-btn:hover {
+    transition: 0.6;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.name-container {
+    font-size: 4vw;
+}
+
+/* About section */
+
+.about-container {
+    font-size: 1.8vw;
+    width: auto;
+    height: auto;
+}
+
+.about-intro-container {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.introduction-container {
+    width: 100%;
+    border-bottom: solid 1px grey;
+    font-size: 2.2vw;
+}
+
+.my-photo {
+    position: relative;
+    width: 90%;
+    height: auto;
+}
+
+.about-detail-section {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.skill-section{
+    padding-left: 5%;
+    width: auto;
+    height: auto;
+}
+
+.skill-detail {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+}
+
+
