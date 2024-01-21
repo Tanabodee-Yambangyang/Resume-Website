@@ -5,14 +5,23 @@
     margin-right: 4%;
 }
 
+.topic-container{
+    text-align: center;
+}
+
 /* Intro section */
 
 .intro-container, .about-container, .project-container, .contact-container {
-    display: flex;
     flex-direction: column;
     font-size: 2vw;
     margin-top: 4%;
 }
+
+
+/* .intro-container{
+    justify-content: center;
+    text-align: center;
+} */
 
 .about-container, .project-container, .contact-container {
     border-top: 1px solid black;
@@ -25,8 +34,7 @@
 .scroll-to-project-btn {
     margin-top: 8%;
     width: 25%;
-    height: 10vh;
-    
+    height: 10vh;   
 }
 
 .scroll-to-project-btn:hover {
@@ -46,7 +54,7 @@
     height: auto;
 }
 
-.about-intro-container {
+.about-intro-container, .project-content {
     display: grid;
     grid-template-columns: auto auto;
 }
@@ -54,13 +62,21 @@
 .introduction-container {
     width: 100%;
     border-bottom: solid 1px grey;
-    font-size: 2.2vw;
+    font-size: 2.1vw;
+    padding-top: 5%;
+    padding-left: 5%;
+}
+
+.my-photo-container {
+    display: flex;
+    justify-content: center;
 }
 
 .my-photo {
     position: relative;
-    width: 90%;
+    width: 70%;
     height: auto;
+    padding-top: 5%;
 }
 
 .about-detail-section {
@@ -69,9 +85,9 @@
 }
 
 .skill-section{
-    padding-left: 5%;
+    padding-left: 10%;
     width: auto;
-    height: auto;
+    height: auto;  
 }
 
 .skill-detail {
@@ -81,4 +97,46 @@
     height: auto;
 }
 
+/* Project */
+.project-photo-container {
+    width: 100%;
+    padding-top: 15%;
+    height: 100%;
+}
 
+.project-photo {
+    position: relative;
+    width: 95%;
+    height: auto;
+}
+
+.project-description {
+    padding-top: 6%;
+    font-size: 1.5vw;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.contace-btn {
+    width: 50%;
+    margin-top: 5vh;
+    margin-left: 25%;
+    margin-right: 25%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.contact-container {
+    margin-bottom: 4%;
+}
+
+.github-btn {
+    width: 40%;
+}

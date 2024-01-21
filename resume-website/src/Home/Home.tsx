@@ -3,7 +3,10 @@ import { format } from 'date-fns';
 import Header from "../components/Header/Header"
 import DefaultButton from '../components/Buttons/DefaultButton/DefaultButton';
 import SkillBox from '../components/SkillsBox/SkillBox';
-import photo_gallery from '../assets/images/photo_gallery.png'
+import wongnung from '../assets/images/wongnung.png'
+import referite from '../assets/images/referite.png'
+import eggseed from '../assets/images/eggseed.png'
+import myPic from '../assets/images/myPic.png'
 import './Home.css'
 
 export default function Home() {
@@ -53,6 +56,53 @@ export default function Home() {
         project: scrollToProjects,
     };
 
+    const linkToReferite = () => {
+        const handleButtonClick = () => {
+            window.open('https://github.com/Referite', '_blank');
+        };
+        handleButtonClick(); // Call the function to open the URL
+    };
+      
+    const linkToWongNung = () => {
+        const handleButtonClick = () => {
+            window.open('https://github.com/WongNung/WongNung', '_blank');
+        };
+        handleButtonClick(); // Call the function to open the URL
+    };
+      
+    const linkToFuiyoh = () => {
+        const handleButtonClick = () => {
+            window.open('https://github.com/eggceed/fuiyoh', '_blank');
+        };
+        handleButtonClick(); // Call the function to open the URL
+    };
+
+    const handleEmailClick = () => {
+        const emailAddress = 'tanabodeeyambangyang@gmail.com'; 
+        const gmailComposeLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(emailAddress)}` 
+
+        window.location.href = gmailComposeLink;
+    };
+
+    const handleFacebookClick = () => {
+        const facebookLink = 'https://www.facebook.com/profile.php?id=100007994625777'
+
+        window.location.href = facebookLink;
+    }
+
+    const handleGitHubClick = () => {
+        const gitHubLink = 'https://github.com/Tanabodee-Yambangyang'
+
+        window.location.href = gitHubLink;
+    }
+
+    const handleLinkedInClick = () => {
+        const linkInLink = 'https://www.linkedin.com/in/tanabodee-yambangyang-11a3882a2/'
+
+        window.location.href = linkInLink;
+    }
+
+    
     return(
         <>
             <Header onLinkClick={handleLinkClick} scrollFunctions={scrollFunctions} />
@@ -60,7 +110,9 @@ export default function Home() {
                 <label> {formattedDate} </label>
                 <div className="intro-container">
                     <div className="name-container"> Hi, I'm Tanabodee Yambangyang. </div>
-                    <p> Front-end Developer || Software Engineering </p>
+                    <div className="role-container">
+                        <p> Front-end Developer || Software Engineering </p>
+                    </div>
                     <DefaultButton
                         text="See my Projects"
                         onClick={scrollToProjects}
@@ -69,10 +121,13 @@ export default function Home() {
                 </div>  
 
                 <div ref={about} className='about-container'>
-                    <h1> About </h1>
+                    <div className="topic-container">
+                        <h1> About </h1>
+                    </div>
+                    
                     <div className="about-intro-container">
                         <div className='my-photo-container'>
-                            <img src={photo_gallery} className="my-photo"/>
+                            <img src={myPic} className="my-photo"/>
                         </div>
                         <div className="introduction-container">
                             <p>
@@ -111,23 +166,102 @@ export default function Home() {
                                     />
                                 ))}
                             </div>
-                        </div>
-                        
-                        
-                            
+                        </div> 
                     </div>
                 </div>
                 
                 <div ref={projects} className='project-container'>
-                    <h2> Project </h2>
+                    <div className="topic-container">
+                        <h1> Projects </h1>
+                        <p> Here you can explore my previous projects </p>
+                    </div>
+                    <div className="project-content">
+                        <div className='project-photo-container'>
+                            <img src={referite} className="project-photo"/>
+                        </div>
+                        <div className='project-description'>
+                            <p>
+                                <h2> Referite </h2>
+                                Referite is an app used to assist the Paris Organization Committee in 
+                                scheduling and recording medal outcomes. It includes a referee login, 
+                                real-time result tracking, data validation, and a user-friendly interface for 
+                                overseeing competitions and country participation.
+                            </p>
+                            <DefaultButton
+                                text="Github Repository"
+                                onClick={linkToReferite}
+                                className='github-btn'
+                            />
+                        </div>  
+                        
+                        <div className='project-photo-container'>
+                            <img src={wongnung} className="project-photo"/>
+                        </div> 
+                        <div className='project-description'>
+                            <p>
+                                <h2> WongNung </h2>        
+                                WongNung is a user-driven film review platform that allows 
+                                users to post and read reviews, and discover like-minded 
+                                communities (Fandoms) with similar film preferences. Users 
+                                can join Fandoms to explore films reviewed by members, creating 
+                                a personalized experience based on their individual film tastes.
+                            </p>
+                            <DefaultButton
+                                text="Github Repository"
+                                onClick={linkToWongNung}
+                                className='github-btn'
+                            />
+                        </div> 
+                        
+                        <div className='project-photo-container'>
+                            <img src={eggseed} className="project-photo"/>
+                        </div>  
+                        <div className='project-description'>
+                            <p>
+                                <h2> Fuiyoh </h2>
+                                Fuiyoh is a seasoning dispenser project for the 19th Exceed Camp, 
+                                Computer Engineering department, Kasetsart University that allows 
+                                users to control the amount of condiments of a specific menu on 
+                                a web app interface.
+                            </p>  
+                            <DefaultButton
+                                text="Github Repository"
+                                onClick={linkToFuiyoh}
+                                className='github-btn'
+                            />
+                        </div>
+                    </div>
                 </div>
 
                 <div ref={contact} className='contact-container'>
-                    <h2> Contact </h2>
+                    <div className="topic-container">
+                        <h1> Contact </h1>
+                        <p> Get in Touch. </p>
+                    </div>
+                    
+                    <div className="contact-content">
+                        <DefaultButton
+                            text="Email"
+                            onClick={handleEmailClick}
+                            className='contace-btn'
+                        />
+                        <DefaultButton
+                            text="GitHub"
+                            onClick={handleGitHubClick}
+                            className='contace-btn'
+                        />
+                        <DefaultButton
+                            text="LinkedIn"
+                            onClick={handleLinkedInClick}
+                            className='contace-btn'
+                        />
+                        <DefaultButton
+                            text="Facebook"
+                            onClick={handleFacebookClick}
+                            className='contace-btn'
+                        />
+                    </div>
                 </div>
-
-                
-
             </div>
 
             
