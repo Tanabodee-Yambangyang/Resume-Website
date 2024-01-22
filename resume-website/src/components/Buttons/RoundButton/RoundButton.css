@@ -1,0 +1,13 @@
+.default-round-button {
+    cursor: pointer;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.default-round-button:disabled {
+    background-color: #b5b5b5;
+    color: #666666;
+    cursor: not-allowed;
+}

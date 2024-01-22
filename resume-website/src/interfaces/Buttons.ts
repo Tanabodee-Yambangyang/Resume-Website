@@ -7,4 +7,5 @@ export interface ButtonProps {
 export interface RoundedButtonProps {
     image: string;
     className?: string;
+    onClick: () => void;
 }

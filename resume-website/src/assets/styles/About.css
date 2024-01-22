@@ -1,0 +1,46 @@
+.about-container {
+    font-size: 1.8vw;
+    width: auto;
+    height: auto;
+}
+
+.about-intro-container {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.my-photo {
+    position: relative;
+    width: 90%;
+    height: auto;
+}
+
+.introduction-container {
+    width: 100%;
+    border-bottom: solid 1px grey;
+    font-size: 2.2vw;
+    padding-top: 5%;
+}
+
+.about-detail-section {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.skill-section{
+    padding-left: 5%;
+    width: auto;
+    height: auto;  
+}
+
+.skill-detail {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+}
+
+.about-intro-container {
+    display: grid;
+    grid-template-columns: auto auto;
+}
