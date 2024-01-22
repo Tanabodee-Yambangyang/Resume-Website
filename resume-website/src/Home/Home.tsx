@@ -2,16 +2,23 @@ import {useState, useEffect, useRef } from 'react';
 import { format } from 'date-fns';
 import Header from "../components/Header/Header"
 import DefaultButton from '../components/Buttons/DefaultButton/DefaultButton';
+import RoundButton from '../components/Buttons/RoundButton/RoundButton';
 import SkillBox from '../components/SkillsBox/SkillBox';
 import wongnung from '../assets/images/wongnung.png'
 import referite from '../assets/images/referite.png'
 import eggseed from '../assets/images/eggseed.png'
+import gmail from '../assets/images/gmail.png'
+import github from '../assets/images/github.png'
+import linkedin from '../assets/images/linkedin.png'
+import facebook from '../assets/images/facebook.png'
 import myPic from '../assets/images/myPic.png'
+
 import './Home.css'
 
 export default function Home() {
     const [dateState, setDateState] = useState(new Date());
 
+    const home = useRef<HTMLDivElement>(null);
     const about = useRef<HTMLDivElement>(null);
     const projects = useRef<HTMLDivElement>(null);
     const contact = useRef<HTMLDivElement>(null);
@@ -26,6 +33,12 @@ export default function Home() {
     const formattedDate = format(dateState, 'eeee,  \xa0dd MMMM yyyy,  \xa0h:mm a');
 
     const skills = ["Python", "JavaScript, TypeScript", "HTML", "CSS", "Git", "npm", "pip", "React.js", "Scrum", "Agile"]
+
+    const scrollToHome = () => {
+        if (home.current) {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    };
 
     const scrollToAbout = () => {
         if (about.current) {
@@ -51,6 +64,7 @@ export default function Home() {
     };
 
     const scrollFunctions: { [key: string]: () => void } = {
+        home: scrollToHome,
         about: scrollToAbout,
         contact: scrollToContact,
         project: scrollToProjects,
@@ -106,7 +120,7 @@ export default function Home() {
     return(
         <>
             <Header onLinkClick={handleLinkClick} scrollFunctions={scrollFunctions} />
-            <div className="homepage-content">
+            <div ref={home} className="homepage-content">
                 <label> {formattedDate} </label>
                 <div className="intro-container">
                     <div className="name-container"> Hi, I'm Tanabodee Yambangyang. </div>
@@ -200,11 +214,9 @@ export default function Home() {
                         <div className='project-description'>
                             <p>
                                 <h2> WongNung </h2>        
-                                WongNung is a user-driven film review platform that allows 
-                                users to post and read reviews, and discover like-minded 
-                                communities (Fandoms) with similar film preferences. Users 
-                                can join Fandoms to explore films reviewed by members, creating 
-                                a personalized experience based on their individual film tastes.
+                                WongNung: a user-driven film review platform where you can post/read reviews, 
+                                discover like-minded Fandoms, and explore personalized film recommendations based 
+                                on your tastes.
                             </p>
                             <DefaultButton
                                 text="Github Repository"
@@ -236,29 +248,29 @@ export default function Home() {
                 <div ref={contact} className='contact-container'>
                     <div className="topic-container">
                         <h1> Contact </h1>
-                        <p> Get in Touch. </p>
+                        <p> Get in Touch </p>
                     </div>
                     
                     <div className="contact-content">
-                        <DefaultButton
-                            text="Email"
+                        <RoundButton
+                            image={gmail}
+                            className='contact-btn'
                             onClick={handleEmailClick}
-                            className='contace-btn'
                         />
-                        <DefaultButton
-                            text="GitHub"
+                        <RoundButton
+                            image={github}
+                            className='contact-btn'
                             onClick={handleGitHubClick}
-                            className='contace-btn'
                         />
-                        <DefaultButton
-                            text="LinkedIn"
+                        <RoundButton
+                            image={linkedin}
+                            className='contact-btn'
                             onClick={handleLinkedInClick}
-                            className='contace-btn'
                         />
-                        <DefaultButton
-                            text="Facebook"
+                        <RoundButton
+                            image={facebook}
+                            className='contact-btn'
                             onClick={handleFacebookClick}
-                            className='contace-btn'
                         />
                     </div>
                 </div>

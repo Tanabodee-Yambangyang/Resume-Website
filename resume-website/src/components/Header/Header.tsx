@@ -22,9 +22,10 @@ const Header: React.FC<HeaderProps> = ({ onLinkClick, scrollFunctions }) => {
     };
 
     const linkConfig = [
-        { label: 'Contact', key: 'contact' },
-        { label: 'Projects', key: 'project' },
+        { label: 'Home', key: 'home' },
         { label: 'About', key: 'about' },
+        { label: 'Projects', key: 'project' },
+        { label: 'Contact', key: 'contact' }
     ];
 
     return(

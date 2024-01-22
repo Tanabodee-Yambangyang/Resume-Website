@@ -32,9 +32,7 @@
 }
 
 .scroll-to-project-btn {
-    margin-top: 8%;
-    width: 25%;
-    height: 10vh;   
+    margin-top: 9%;
 }
 
 .scroll-to-project-btn:hover {
@@ -116,27 +114,51 @@
 }
 
 .contact-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
     margin-bottom: 5%;
+    width: 85%;
 }
 
-.contace-btn {
-    width: 50%;
+/* .github-btn {
+    width: 40%;
+} */
+
+.contact-btn {
+    width: 35%;
     margin-top: 5vh;
     margin-left: 25%;
     margin-right: 25%;
-    display: flex;
-    justify-content: center;
-    text-align: center;
 }
 
 .contact-container {
-    margin-bottom: 4%;
+    margin-bottom: 5%;
 }
 
-.github-btn {
-    width: 40%;
+.image-contact-btn {
+    width: 100%;
+}
+
+/* @media (max-width: 2262px) {
+    .scroll-to-project-btn{
+        height: auto;
+    }
+} */
+
+@media (max-width: 594px) {
+    .about-detail-section {
+        display: grid;
+        grid-template-columns: auto;
+        width: 90%;
+        font-size: 3vw;
+    }
+
+    .default-skill-box {
+        font-size: 2.5vw;
+    }
+
+    .scroll-to-project-btn{
+        height: auto;
+    }
 }
