@@ -32,7 +32,22 @@ export default function Home() {
 
     const formattedDate = format(dateState, 'eeee,  \xa0dd MMMM yyyy,  \xa0h:mm a');
 
-    const skills = ["Python", "JavaScript, TypeScript", "HTML", "CSS", "Git", "npm", "pip", "React.js", "Scrum", "Agile"]
+    const skills = [
+        "Python", 
+        "JavaScript, TypeScript", 
+        "c++", 
+        "Java", 
+        "HTML", 
+        "CSS", 
+        "Git", 
+        "Markdown", 
+        "npm", 
+        "pip", 
+        "React.js", 
+        "Django",
+        "Scrum", 
+        "Agile"
+    ]
 
     const scrollToHome = () => {
         if (home.current) {
