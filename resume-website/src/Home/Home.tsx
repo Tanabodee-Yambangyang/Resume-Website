@@ -35,7 +35,7 @@ export default function Home() {
     const skills = [
         "Python", 
         "JavaScript, TypeScript", 
-        "c++", 
+        "C++", 
         "Java", 
         "HTML", 
         "CSS", 
@@ -43,7 +43,11 @@ export default function Home() {
         "Markdown", 
         "npm", 
         "pip", 
+        "Selenium",
+        "Vercel",
         "React.js", 
+        "TailwindCSS",
+        "UnitTesT",
         "Django",
         "Scrum", 
         "Agile"
