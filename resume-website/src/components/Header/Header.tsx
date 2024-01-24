@@ -25,7 +25,7 @@ const Header: React.FC<HeaderProps> = ({ onLinkClick, scrollFunctions }) => {
         { label: 'Home', key: 'home' },
         { label: 'About', key: 'about' },
         { label: 'Projects', key: 'project' },
-        { label: 'Contact', key: 'contact' }
+        { label: 'Contact me', key: 'contact' }
     ];
 
     return(

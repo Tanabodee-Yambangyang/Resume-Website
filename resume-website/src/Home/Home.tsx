@@ -262,7 +262,7 @@ export default function Home() {
 
                 <div ref={contact} className='contact-container'>
                     <div className="topic-container">
-                        <h1> Contact </h1>
+                        <h1> Contact me </h1>
                         <p> Get in Touch </p>
                     </div>
                     

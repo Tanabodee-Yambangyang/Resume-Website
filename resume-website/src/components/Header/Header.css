@@ -15,7 +15,6 @@
 .title-container {  
     font-size: 1.4vw;
     margin-left: 8%;
-    padding-top: 1%;
     padding-bottom: 1%;
 }
 
@@ -30,7 +29,7 @@
     padding-left: 9%;
     padding-right: 9%;
     padding-top: 1%;
-    padding-bottom: 1.5%;
+    padding-bottom: 1%;
     position: relative;
     color: lightgray;
     display: block;
